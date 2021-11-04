@@ -1,0 +1,23 @@
+@mixin show {
+  transform: none;
+  opacity: 1;
+}
+
+@mixin hideBelow {
+  transform: translateY(70px);
+  opacity: 0;
+}
+
+@mixin hideRight {
+  transform: translateX(70px);
+  opacity: 0;
+}
+
+@mixin hideLeft {
+  transform: translateX(-70px);
+  opacity: 0;
+}
+
+@mixin hideCenter {
+  opacity: 0;
+}

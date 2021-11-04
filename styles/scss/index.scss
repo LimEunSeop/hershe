@@ -1,0 +1,34 @@
+@import './normalize.scss';
+@import './custom-reset.scss';
+@import 'fonts.scss';
+
+@import './sections/main-video.scss';
+@import './sections/professional.scss';
+@import './sections/academic.scss';
+@import './sections/focus.scss';
+@import './sections/program.scss';
+@import './sections/review.scss';
+@import './sections/etc.scss';
+@import './sections/sns.scss';
+
+html {
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+}
+
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0); /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}

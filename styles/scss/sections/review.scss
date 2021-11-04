@@ -1,0 +1,83 @@
+@import '../configs.scss';
+@import '../animation.scss';
+
+.review {
+  display: grid;
+  grid-template-columns: 1.683fr 1fr 1.081fr;
+  grid-template-rows: 1.83fr 1fr 4.3fr;
+  gap: 4%;
+  background-color: #fff;
+  padding: 200px 7% 0 7%;
+  overflow: hidden;
+
+  &.active {
+    .review__item {
+      @include show;
+    }
+  }
+
+  &__item {
+    &:nth-of-type(1) {
+      grid-column: 1;
+      grid-row: 1 / span 3;
+      transition: all 1s;
+      @include hideLeft;
+    }
+    &:nth-of-type(2) {
+      grid-column: 2;
+      grid-row: 1;
+      transition: all 1s 0.6s;
+      @include hideCenter;
+    }
+    &:nth-of-type(3) {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      transition: all 1s 1.2s;
+      @include hideRight;
+    }
+    &:nth-of-type(4) {
+      grid-column: 2;
+      grid-row: 2 / span 2;
+      position: relative;
+
+      img {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    &:nth-of-type(5) {
+      grid-column: 3;
+      grid-row: 3;
+      transition: all 1s 1.8s;
+      @include hideCenter;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+  }
+  &__heading {
+    font-weight: 200;
+    font-size: 20px;
+  }
+  &__question {
+    font-size: 54px;
+    font-weight: 500;
+  }
+  &__subtitle {
+    font-size: 42px;
+    color: $main-color;
+    margin-top: 10px;
+  }
+  &__introduce {
+    font-weight: 200;
+    font-size: 20px;
+    margin-top: 15px;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+  }
+}

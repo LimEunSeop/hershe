@@ -1,0 +1,90 @@
+@import '../configs.scss';
+@import '../animation.scss';
+
+.focus {
+  background-color: #1e2327;
+  padding-top: 1px;
+
+  &.active {
+    .focus__item {
+      @include show;
+    }
+  }
+
+  &__wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    color: #666;
+    margin-top: 160px;
+    &:nth-of-type(1) {
+      border-bottom: 1px solid #666;
+      transition: all 1s;
+      @include hideRight;
+    }
+    &:nth-of-type(2) {
+      transition: all 1s 0.6s;
+      @include hideRight;
+    }
+
+    &.active {
+      .focus__year {
+        color: #fff;
+      }
+      .focus__category {
+        color: #fff;
+      }
+      .focus__title {
+        color: #a66fb7;
+      }
+      img {
+        visibility: visible;
+      }
+    }
+
+    button {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      cursor: pointer;
+    }
+    img {
+      visibility: hidden;
+      position: relative;
+      top: -50px;
+      width: 700px;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+  &__year {
+    position: absolute;
+    top: 30px;
+    right: calc(100% - 10px);
+    transform: rotate(-90deg);
+    // active color #fff
+  }
+  &__category {
+    font-size: 28px;
+    // active color #fff
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    // active color #a66fb7
+  }
+  &__desc {
+    font-size: 22px;
+    text-align: left;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,55 @@
+@import '../configs.scss';
+@import '../animation.scss';
+
+.sns {
+  background-color: #fff;
+  padding: 100px 0;
+
+  &.active {
+    .sns__inner {
+      @include show;
+    }
+  }
+
+  &__inner {
+    width: 1300px;
+    margin: 0 auto;
+    transition: all 1s;
+    @include hideBelow;
+  }
+
+  &__img {
+    float: left;
+    position: relative;
+
+    &-main {
+      width: 800px;
+    }
+    &-youtubebt {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__intro {
+    float: left;
+    padding-left: 80px;
+    width: calc(100% - 800px);
+
+    &-hashtags {
+      font-size: 28px;
+      margin-top: 25px;
+      margin-bottom: 35px;
+    }
+    &-title {
+      font-size: 38px;
+      font-weight: 400;
+      color: $main-color;
+    }
+    &-more {
+      color: #a89c2a;
+    }
+  }
+}

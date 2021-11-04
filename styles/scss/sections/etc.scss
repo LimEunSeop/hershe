@@ -1,0 +1,36 @@
+@import '../animation.scss';
+
+.etc {
+  background-color: #fafafa;
+  padding: 100px 0;
+
+  &.active {
+    .etc__section-wrapper {
+      @include show;
+    }
+  }
+
+  &__section {
+    &-wrapper {
+      display: flex;
+      gap: 100px;
+      width: 1280px;
+      margin: 0 auto;
+      transition: all 1s;
+      @include hideBelow;
+    }
+  }
+
+  &__heading {
+    font-size: 24px;
+  }
+  &__itemlist {
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  &__more {
+    color: #a89c2a;
+  }
+}
